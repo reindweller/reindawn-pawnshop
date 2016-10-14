@@ -1,0 +1,14 @@
+C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\bin\Release\Reindawn.Utilities.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\bin\Release\Reindawn.Utilities.pdb
+C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\bin\Release\AutoMapper.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\bin\Release\AutoMapper.xml
+C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\obj\Release\Reindawn.Utilities.csprojResolveAssemblyReference.cache
+C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\obj\Release\Reindawn.Utilities.dll
+C:\Arvin\Projects\Reindawn - API\Reindawn.Utilities\obj\Release\Reindawn.Utilities.pdb
+D:\Arvin\Projects\git\Reindawn - API\Reindawn.Utilities\bin\Release\Reindawn.Utilities.dll
+D:\Arvin\Projects\git\Reindawn - API\Reindawn.Utilities\bin\Release\Reindawn.Utilities.pdb
+D:\Arvin\Projects\git\Reindawn - API\Reindawn.Utilities\bin\Release\AutoMapper.dll
+D:\Arvin\Projects\git\Reindawn - API\Reindawn.Utilities\bin\Release\AutoMapper.xml
+D:\Arvin\Projects\git\Reindawn - API\Reindawn.Utilities\obj\Release\Reindawn.Utilities.csprojResolveAssemblyReference.cache
+D:\Arvin\Projects\git\Reindawn - API\Reindawn.Utilities\obj\Release\Reindawn.Utilities.dll
+D:\Arvin\Projects\git\Reindawn - API\Reindawn.Utilities\obj\Release\Reindawn.Utilities.pdb
