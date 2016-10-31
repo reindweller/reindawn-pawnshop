@@ -4,7 +4,7 @@
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Arvin\\Projects\\git\\Reindawn\ -\ API\\ReindawnApi\\obj\\Release\\Package\\PackageTmp$" />
     <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\Arvin\\Projects\\git\\Reindawn\ -\ API\\ReindawnApi\\obj\\Release\\Package\\PackageTmp$" />
   </parameter>
-  <parameter name="Reindawn-Web.config Connection String" description="" value="Data Source=tcp:reindawn.database.windows.net,1433;Initial Catalog=reindawndb;User Id=reindawnadmin@reindawn;Password=P@ssw0rd" tags="">
+  <parameter name="Reindawn-Web.config Connection String" description="" value="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-WebApplication1-20161007035234.mdf;Initial Catalog=aspnet-WebApplication1-20161007035234;Integrated Security=True" tags="">
     <parameterEntry kind="XmlFile" scope="D:\\Arvin\\Projects\\git\\Reindawn\ -\ API\\ReindawnApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Reindawn']/@connectionString" />
   </parameter>
 </parameters>

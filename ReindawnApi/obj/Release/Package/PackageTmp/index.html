@@ -6,13 +6,13 @@
 <body>
 
     <div>
-        <h2>Login</h2>
+        Login
         <input type="text" id="email" />
         <input type="text" id="password" />
         <input type="button" value="Login" onclick="login();"/>
     </div>
 <div>
-    <h2>Register</h2>
+    Register
     <div>
         email:
         <input type="text" id="regEmail"/>
@@ -26,9 +26,29 @@
         <input type="text" id="regConfirmPassword"/>
     </div>
     <div>
-        <input type="button" value="Register" onclick="register();" />
+        role:
+        <select id="Role">
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+        </select>
+    </div>
+    <div>
+        <input type="button" value="Register" onclick="register();"/>
     </div>
 </div>
+
+
+    <div>
+        role
+        <div>
+            rolename:
+            <input type="text" id="roleName" />
+        </div>
+        <div>
+            <input type="button" value="Add Role" onclick="addrole();" />
+        </div>
+    </div>
+
 
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
     <script>
@@ -67,12 +87,13 @@
         var email = $('#regEmail').val();
         var password = $('#regPassword').val();
         var cPassword = $('#regConfirmPassword').val();
+        var role = $('#Role option:selected').val();
         
         $.ajax({
             url: "api/user/register",
             type: 'POST',
             dataType: 'json',
-            data: JSON.stringify({ Email: email, Password: password, ConfirmPassword: cPassword }),
+            data: JSON.stringify({ Email: email, Password: password, ConfirmPassword: cPassword, Role: role }),
             contentType: "application/json",
             success: function (result) {
                 window.location.replace("news.html");
@@ -82,6 +103,28 @@
             }
         });
     }
+
+    function addrole() {
+        console.log("adding role...");
+        var roleName = $('#roleName').val();
+
+        console.log(roleName);
+
+        $.ajax({
+            url: "api/user/addrole",
+            type: 'POST',
+            dataType: 'json',
+            data: JSON.stringify(roleName),
+            contentType: "application/json",
+            success: function (result) {
+                console.log(result);
+            },
+            fail: function (jqXHR, textStatus, err) {
+                console.log(err);
+            }
+        });
+    }
+    
     </script>
 </body>
 </html>

@@ -30,3 +30,5 @@ D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\bin\Release\Microsoft.A
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\obj\Release\Reindawn.Repository.csprojResolveAssemblyReference.cache
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\obj\Release\Reindawn.Repository.dll
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\obj\Release\Reindawn.Repository.pdb
+D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\obj\Release\Reindawn.Repository.Migrations.adddisaster.resources
+D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\obj\Release\Reindawn.Repository.csproj.GenerateResource.Cache
