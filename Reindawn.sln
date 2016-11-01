@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reindawn.Utilities", "Reind
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReindawnApi", "ReindawnApi\ReindawnApi.csproj", "{2B3ECD97-3E02-4496-9ED8-58D77957AA4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reindawn.Pawnshop", "Reindawn.Pawnshop\Reindawn.Pawnshop.csproj", "{2188B602-5D4C-4805-9EE7-CCAA65E48256}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2B3ECD97-3E02-4496-9ED8-58D77957AA4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B3ECD97-3E02-4496-9ED8-58D77957AA4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B3ECD97-3E02-4496-9ED8-58D77957AA4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2188B602-5D4C-4805-9EE7-CCAA65E48256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2188B602-5D4C-4805-9EE7-CCAA65E48256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2188B602-5D4C-4805-9EE7-CCAA65E48256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2188B602-5D4C-4805-9EE7-CCAA65E48256}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
