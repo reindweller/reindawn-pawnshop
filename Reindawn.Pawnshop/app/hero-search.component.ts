@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
 import { Observable }        from 'rxjs/Observable';
 import { Subject }           from 'rxjs/Subject';
@@ -10,7 +10,7 @@ import { Hero } from './hero';
   moduleId: module.id,
   selector: 'hero-search',
   templateUrl: 'hero-search.component.html',
-  styleUrls: [ 'hero-search.component.css' ],
+  styleUrls: [ 'styles/hero-search.component.css' ],
   providers: [HeroSearchService]
 })
 export class HeroSearchComponent implements OnInit {
