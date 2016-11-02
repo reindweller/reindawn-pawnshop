@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -14,12 +15,13 @@
     <RootNamespace>Reindawn.Pawnshop</RootNamespace>
     <AssemblyName>Reindawn.Pawnshop</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <TypeScriptToolsVersion>2.0</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,30 +60,176 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="app\dashboard\dashboard.component.html" />
+    <Content Include="app\dashboard\home\chat.html" />
+    <Content Include="app\dashboard\home\home.component.html" />
+    <Content Include="app\dashboard\home\notifications.html" />
+    <Content Include="app\dashboard\home\timeline.html" />
+    <Content Include="app\hero-detail.component.html" />
+    <Content Include="app\hero-search.component.html" />
+    <Content Include="app\heroes.component.html" />
+    <Content Include="app\login\login.component.html" />
+    <Content Include="app\styles\app.component.css" />
+    <Content Include="app\dashboard\dashboard.component.css" />
+    <Content Include="app\styles\hero-detail.component.css" />
+    <Content Include="app\styles\hero-search.component.css" />
+    <Content Include="app\styles\heroes.component.css" />
+    <Content Include="app\styles\styles.css" />
+    <Content Include="assets\img\SB-admin.png" />
+    <Content Include="assets\img\slider0.jpg" />
+    <Content Include="assets\img\slider1.jpg" />
+    <Content Include="assets\img\slider2.jpg" />
+    <Content Include="assets\img\slider3.jpg" />
+    <Content Include="assets\img\smile.png" />
+    <Content Include="index.html" />
+    <Content Include="scripts\ai.0.22.19-build00125.js" />
+    <Content Include="scripts\ai.0.22.19-build00125.min.js" />
+    <Content Include="systemjs.config.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\app-routing.module.ts" />
+    <TypeScriptCompile Include="app\app.component.ts" />
+    <TypeScriptCompile Include="app\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="app\dashboard\dashboard.module.ts" />
+    <TypeScriptCompile Include="app\dashboard\dashboard.routes.ts" />
+    <TypeScriptCompile Include="app\dashboard\home\home.component.ts" />
+    <TypeScriptCompile Include="app\dashboard\home\home.module.ts" />
+    <TypeScriptCompile Include="app\dashboard\home\home.routes.ts" />
+    <TypeScriptCompile Include="app\dashboard\home\index.ts" />
+    <TypeScriptCompile Include="app\dashboard\index.ts" />
+    <TypeScriptCompile Include="app\hero-detail.component.ts" />
+    <TypeScriptCompile Include="app\hero-search.component.ts" />
+    <TypeScriptCompile Include="app\hero-search.service.ts" />
+    <TypeScriptCompile Include="app\hero.service.ts" />
+    <TypeScriptCompile Include="app\hero.ts" />
+    <TypeScriptCompile Include="app\heroes.component.ts" />
+    <TypeScriptCompile Include="app\in-memory-data.service.ts" />
+    <TypeScriptCompile Include="app\login\index.ts" />
+    <TypeScriptCompile Include="app\login\login.component.ts" />
+    <TypeScriptCompile Include="app\login\login.module.ts" />
+    <TypeScriptCompile Include="app\login\login.routes.ts" />
+    <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\mock-heroes.ts" />
+    <TypeScriptCompile Include="app\rxjs-extensions.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="packages.config" />
+    <Content Include="tsconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\services\" />
+    <Folder Include="app\shared\" />
+    <Folder Include="Content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\bootstrap\mixins\_alert.scss" />
+    <Content Include="assets\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="assets\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="assets\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="assets\bootstrap\mixins\_buttons.scss" />
+    <Content Include="assets\bootstrap\mixins\_cards.scss" />
+    <Content Include="assets\bootstrap\mixins\_center-block.scss" />
+    <Content Include="assets\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="assets\bootstrap\mixins\_forms.scss" />
+    <Content Include="assets\bootstrap\mixins\_gradients.scss" />
+    <Content Include="assets\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="assets\bootstrap\mixins\_grid.scss" />
+    <Content Include="assets\bootstrap\mixins\_hover.scss" />
+    <Content Include="assets\bootstrap\mixins\_image.scss" />
+    <Content Include="assets\bootstrap\mixins\_label.scss" />
+    <Content Include="assets\bootstrap\mixins\_list-group.scss" />
+    <Content Include="assets\bootstrap\mixins\_lists.scss" />
+    <Content Include="assets\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="assets\bootstrap\mixins\_navbar-align.scss" />
+    <Content Include="assets\bootstrap\mixins\_pagination.scss" />
+    <Content Include="assets\bootstrap\mixins\_progress.scss" />
+    <Content Include="assets\bootstrap\mixins\_pulls.scss" />
+    <Content Include="assets\bootstrap\mixins\_reset-filter.scss" />
+    <Content Include="assets\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="assets\bootstrap\mixins\_resize.scss" />
+    <Content Include="assets\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="assets\bootstrap\mixins\_size.scss" />
+    <Content Include="assets\bootstrap\mixins\_tab-focus.scss" />
+    <Content Include="assets\bootstrap\mixins\_table-row.scss" />
+    <Content Include="assets\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="assets\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="assets\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="assets\bootstrap\_alert.scss" />
+    <Content Include="assets\bootstrap\_animation.scss" />
+    <Content Include="assets\bootstrap\_bootstrap.scss" />
+    <Content Include="assets\bootstrap\_breadcrumb.scss" />
+    <Content Include="assets\bootstrap\_button-group.scss" />
+    <Content Include="assets\bootstrap\_buttons.scss" />
+    <Content Include="assets\bootstrap\_card.scss" />
+    <Content Include="assets\bootstrap\_carousel.scss" />
+    <Content Include="assets\bootstrap\_close.scss" />
+    <Content Include="assets\bootstrap\_code.scss" />
+    <Content Include="assets\bootstrap\_custom-forms.scss" />
+    <Content Include="assets\bootstrap\_dropdown.scss" />
+    <Content Include="assets\bootstrap\_forms.scss" />
+    <Content Include="assets\bootstrap\_grid.scss" />
+    <Content Include="assets\bootstrap\_images.scss" />
+    <Content Include="assets\bootstrap\_input-group.scss" />
+    <Content Include="assets\bootstrap\_jumbotron.scss" />
+    <Content Include="assets\bootstrap\_labels.scss" />
+    <Content Include="assets\bootstrap\_list-group.scss" />
+    <Content Include="assets\bootstrap\_media.scss" />
+    <Content Include="assets\bootstrap\_mixins.scss" />
+    <Content Include="assets\bootstrap\_modal.scss" />
+    <Content Include="assets\bootstrap\_nav.scss" />
+    <Content Include="assets\bootstrap\_navbar.scss" />
+    <Content Include="assets\bootstrap\_normalize.scss" />
+    <Content Include="assets\bootstrap\_pager.scss" />
+    <Content Include="assets\bootstrap\_pagination.scss" />
+    <Content Include="assets\bootstrap\_popover.scss" />
+    <Content Include="assets\bootstrap\_print.scss" />
+    <Content Include="assets\bootstrap\_progress.scss" />
+    <Content Include="assets\bootstrap\_reboot.scss" />
+    <Content Include="assets\bootstrap\_responsive-embed.scss" />
+    <Content Include="assets\bootstrap\_tables.scss" />
+    <Content Include="assets\bootstrap\_tooltip.scss" />
+    <Content Include="assets\bootstrap\_type.scss" />
+    <Content Include="assets\bootstrap\_utilities-background.scss" />
+    <Content Include="assets\bootstrap\_utilities-responsive.scss" />
+    <Content Include="assets\bootstrap\_utilities-spacing.scss" />
+    <Content Include="assets\bootstrap\_utilities.scss" />
+    <Content Include="assets\bootstrap\_variables.scss" />
+    <Content Include="assets\bootstrap\__bootstrap-flex.scss" />
+    <Content Include="assets\bootstrap\__bootstrap-grid.scss" />
+    <Content Include="assets\bootstrap\__bootstrap-reboot.scss" />
+    <Content Include="assets\data.json" />
+    <Content Include="assets\sass\app.scss" />
+    <Content Include="assets\sass\_app-base.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\dashboard\home\timeline.scss" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost:57175/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

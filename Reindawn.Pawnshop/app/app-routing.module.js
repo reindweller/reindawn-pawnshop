@@ -10,15 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var dashboard_component_1 = require('./dashboard.component');
+//import { DashboardComponent }   from './dashboard/dashboard.component';
+var index_1 = require('./dashboard/index');
 var heroes_component_1 = require('./heroes.component');
 var hero_detail_component_1 = require('./hero-detail.component');
-var routes = [
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
+var index_2 = require('./login/index');
+var index_3 = require('./login/index');
+//import { DashboardRoutes } from './dashboard/index';
+var routes = index_2.LoginRoutes.concat(index_1.DashboardRoutes, [
+    //{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+    //{ path: 'dashboard',  component: DashboardComponent },
     { path: 'detail/:id', component: hero_detail_component_1.HeroDetailComponent },
-    { path: 'heroes', component: heroes_component_1.HeroesComponent }
-];
+    { path: 'heroes', component: heroes_component_1.HeroesComponent },
+    { path: '**', component: index_3.LoginComponent }
+]);
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
     }

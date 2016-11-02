@@ -1,6 +1,6 @@
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Pawnshop\bin\Reindawn.Pawnshop.dll.config
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Pawnshop\bin\Reindawn.Pawnshop.dll
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Pawnshop\bin\Reindawn.Pawnshop.pdb
-D:\Arvin\Projects\git\Reindawn - API\Reindawn.Pawnshop\obj\Debug\Reindawn.Pawnshop.csprojResolveAssemblyReference.cache
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Pawnshop\obj\Debug\Reindawn.Pawnshop.dll
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Pawnshop\obj\Debug\Reindawn.Pawnshop.pdb
+D:\Arvin\Projects\git\Reindawn - API\Reindawn.Pawnshop\obj\Debug\Reindawn.Pawnshop.csprojResolveAssemblyReference.cache

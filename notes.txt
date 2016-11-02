@@ -1,0 +1,6 @@
+When visual studio returns error for '$'
+
+// 1. Install typings
+npm install typings -g
+// 2. Download jquery.d.ts (run this command in the root dir of your project)
+typings install dt~jquery --global --save
