@@ -56,7 +56,7 @@ D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\bin\Debug\EntityFramewo
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\obj\Debug\Reindawn.Repository.csprojResolveAssemblyReference.cache
-D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\obj\Debug\Reindawn.Repository.dll
-D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\obj\Debug\Reindawn.Repository.pdb
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\obj\Debug\Reindawn.Repository.Migrations.adddisaster.resources
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\obj\Debug\Reindawn.Repository.csproj.GenerateResource.Cache
+D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\obj\Debug\Reindawn.Repository.dll
+D:\Arvin\Projects\git\Reindawn - API\Reindawn.Repository\obj\Debug\Reindawn.Repository.pdb

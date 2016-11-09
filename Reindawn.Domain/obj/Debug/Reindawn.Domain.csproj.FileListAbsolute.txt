@@ -49,3 +49,4 @@ D:\Arvin\Projects\git\Reindawn - API\Reindawn.Domain\bin\Debug\Microsoft.AspNet.
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Domain\obj\Debug\Reindawn.Domain.dll
 D:\Arvin\Projects\git\Reindawn - API\Reindawn.Domain\obj\Debug\Reindawn.Domain.pdb
+D:\Arvin\Projects\git\Reindawn - API\Reindawn.Domain\obj\Debug\Reindawn.Domain.csprojResolveAssemblyReference.cache
