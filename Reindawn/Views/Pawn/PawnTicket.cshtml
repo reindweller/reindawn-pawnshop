@@ -1,0 +1,157 @@
+﻿@model Reindawn.Models.PawnTicketViewModel
+
+@{
+    ViewBag.Title = "PawnTicket";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Pawn Ticket</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Create New Pawn Ticket
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.DateLoanGranted)
+                                @Html.EditorFor(model => model.DateLoanGranted, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                @Html.ValidationMessageFor(model => model.DateLoanGranted, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <!-- /.col-lg-6 (nested) -->
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ExpirationDate)
+                                @Html.EditorFor(model => model.DateLoanGranted, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                @Html.ValidationMessageFor(model => model.DateLoanGranted, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <!-- /.col-lg-6 (nested) -->
+                    </div>
+                    <!-- /.row (nested) -->
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.MaturityDate)
+                                @Html.EditorFor(model => model.MaturityDate, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                @Html.ValidationMessageFor(model => model.MaturityDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <!-- /.col-lg-6 (nested) -->
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.AuctionSale)
+                                @Html.EditorFor(model => model.AuctionSale, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                @Html.ValidationMessageFor(model => model.AuctionSale, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <!-- /.col-lg-6 (nested) -->
+                    </div>
+                    <!-- /.row (nested) -->
+
+                    <fieldset disabled>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.SignatureCard.Prefix)
+                                    @Html.EditorFor(model => model.SignatureCard.Prefix, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                    @Html.ValidationMessageFor(model => model.SignatureCard.Prefix, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <!-- /.col-lg-3 (nested) -->
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.SignatureCard.FirstName)
+                                    @Html.EditorFor(model => model.SignatureCard.FirstName, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                    @Html.ValidationMessageFor(model => model.SignatureCard.FirstName, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <!-- /.col-lg-3 (nested) -->
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.SignatureCard.MiddleName)
+                                    @Html.EditorFor(model => model.SignatureCard.MiddleName, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                    @Html.ValidationMessageFor(model => model.SignatureCard.MiddleName, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <!-- /.col-lg-3 (nested) -->
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.SignatureCard.LastName)
+                                    @Html.EditorFor(model => model.SignatureCard.LastName, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                    @Html.ValidationMessageFor(model => model.SignatureCard.LastName, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <!-- /.col-lg-3 (nested) -->
+                        </div>
+                        <!-- /.row (nested) -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.SignatureCard.Address)
+                                    @Html.EditorFor(model => model.SignatureCard.Address, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                    @Html.ValidationMessageFor(model => model.SignatureCard.Address, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <!-- /.col-lg-12 (nested) -->
+                        </div>
+                        <!-- /.row (nested) -->
+                    </fieldset>
+                    <!-- /.fieldset (disabled) -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <fieldset disabled>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.AppraisersSlip.Amount)
+                                    @Html.EditorFor(model => model.AppraisersSlip.Amount, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                    @Html.ValidationMessageFor(model => model.AppraisersSlip.Amount, "", new { @class = "text-danger" })
+                                </div>
+                            </fieldset>
+                        </div>
+                        <!-- /.col-lg-6 (nested) -->
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Interest)
+                                @Html.EditorFor(model => model.Interest, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                @Html.ValidationMessageFor(model => model.Interest, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <!-- /.col-lg-6 (nested) -->
+                    </div>
+                    <!-- /.row (nested) -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Description)
+                                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <!-- /.col-lg-12 (nested) -->
+                    </div>
+                    <!-- /.row (nested) -->
+                </form>
+            </div>
+            <!-- /.panel-body -->
+            <div class="panel-footer">
+                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="reset" class="btn btn-default">Reset</button>
+            </div>
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->

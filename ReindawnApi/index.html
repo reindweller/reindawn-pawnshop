@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Reindawn App</title>
+</head>
+<body>
+
+    <div>
+        Login
+        <input type="text" id="email" />
+        <input type="text" id="password" />
+        <input type="button" value="Login" onclick="login();"/>
+    </div>
+<div>
+    Register
+    <div>
+        email:
+        <input type="text" id="regEmail"/>
+    </div>
+    <div>
+        password:
+        <input type="text" id="regPassword"/>
+    </div>
+    <div>
+        confirm password:
+        <input type="text" id="regConfirmPassword"/>
+    </div>
+    <div>
+        role:
+        <select id="Role">
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+        </select>
+    </div>
+    <div>
+        <input type="button" value="Register" onclick="register();"/>
+    </div>
+</div>
+
+
+    <div>
+        role
+        <div>
+            rolename:
+            <input type="text" id="roleName" />
+        </div>
+        <div>
+            <input type="button" value="Add Role" onclick="addrole();" />
+        </div>
+    </div>
+
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+
+    $(document).ready(function () {
+    });
+
+    function login() {
+        console.log("login in...");
+        var email = $('#email').val();
+        var password = $('#password').val();
+
+
+        var model = {
+            Email: email,
+            Password: password
+        };
+
+        $.ajax({
+            url: "api/user/login",
+            type: 'POST',
+            dataType: 'json',
+            data: JSON.stringify(model),
+            contentType: "application/json",
+            success: function (result) {
+                window.location.replace("news.html");
+            },
+            fail: function (jqXHR, textStatus, err) {
+                console.log(err);
+            }
+        });
+    }
+
+    function register() {
+        console.log("registering...");
+        var email = $('#regEmail').val();
+        var password = $('#regPassword').val();
+        var cPassword = $('#regConfirmPassword').val();
+        var role = $('#Role option:selected').val();
+        
+        $.ajax({
+            url: "api/user/register",
+            type: 'POST',
+            dataType: 'json',
+            data: JSON.stringify({ Email: email, Password: password, ConfirmPassword: cPassword, Role: role }),
+            contentType: "application/json",
+            success: function (result) {
+                window.location.replace("news.html");
+            },
+            fail: function (jqXHR, textStatus, err) {
+                console.log(err);
+            }
+        });
+    }
+
+    function addrole() {
+        console.log("adding role...");
+        var roleName = $('#roleName').val();
+
+        console.log(roleName);
+
+        $.ajax({
+            url: "api/user/addrole",
+            type: 'POST',
+            dataType: 'json',
+            data: JSON.stringify(roleName),
+            contentType: "application/json",
+            success: function (result) {
+                console.log(result);
+            },
+            fail: function (jqXHR, textStatus, err) {
+                console.log(err);
+            }
+        });
+    }
+    
+    </script>
+</body>
+</html>

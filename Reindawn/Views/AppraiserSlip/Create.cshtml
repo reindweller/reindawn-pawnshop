@@ -1,0 +1,260 @@
+﻿
+@model Reindawn.Models.AppraisersSlipViewModel
+
+@{
+    ViewBag.Title = "AppraiserSlip";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Appraiser Slip</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Create New Appraisal Slip
+                </div>
+                <div class="panel-body">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#home" data-toggle="tab" id="tbJewelry">Jewelry</a>
+                        </li>
+                        <li>
+                            <a href="#home" data-toggle="tab" id="tbGadget">Gadget</a>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    @Html.HiddenFor(model => model.ItemType)
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="home">
+                            &nbsp;
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!-- Button trigger modal -->
+                                    <button id="btnSelectSc" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                                        Launch demo modal
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        @Html.HiddenFor(model => model.SignatureCardId)
+                                        @Html.LabelFor(model => model.FullName):
+                                        @Html.DisplayFor(model => model.FullName)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Amount)
+                                        @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control", onclick = "this.focus();this.select()" } })
+                                        @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Date)
+                                        @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row jewelry">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Weight)
+                                        @Html.EditorFor(model => model.Weight, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Weight, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Quantity)
+                                        @Html.EditorFor(model => model.Quantity, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row jewelry">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.JewelryType)
+                                        @Html.EnumDropDownListFor(model => model.JewelryType, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.JewelryType, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Carat)
+                                        @Html.EditorFor(model => model.Carat, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Carat, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row jewelry">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Remarks)
+                                        @Html.EditorFor(model => model.Remarks, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Remarks, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gadget">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Brand)
+                                        @Html.EditorFor(model => model.Brand, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Brand, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Model)
+                                        @Html.EditorFor(model => model.Model, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Model, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gadget">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Inclusions)
+                                        @Html.EditorFor(model => model.Inclusions, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Inclusions, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.SerialNo)
+                                        @Html.EditorFor(model => model.SerialNo, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.SerialNo, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Select Signature Card</h4>
+                </div>
+                <div class="modal-body">
+                    <table width="100%" class="table table-striped table-bordered table-hover" id="SignatureCardsTable">
+                        <thead>
+                            <tr>
+                                <th class="hidden">@Html.DisplayNameFor(model => model.SignatureCardsSelect.First().Id)</th>
+                                <th>@Html.DisplayNameFor(model => model.SignatureCardsSelect.First().PawnticketNo)</th>
+                                <th>@Html.DisplayNameFor(model => model.SignatureCardsSelect.First().Date)</th>
+                                <th>@Html.DisplayNameFor(model => model.SignatureCardsSelect.First().FullName)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.SignatureCardsSelect)
+                                {
+                                <tr>
+                                    <td class="hidden">@Html.DisplayFor(modelItem => item.Id)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.PawnticketNo)</td>
+                                    <td class="center">@Html.DisplayFor(modelItem => item.Date)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.FullName)</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <!-- /.table-responsive -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button id="btnScModalSelect" type="button" class="btn btn-primary">Select</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $(".gadget").hide();
+
+            $("#tbJewelry").click(function () {
+                $("#ItemType").val(0);
+                $(".jewelry").show();
+                $(".gadget").hide();
+            });
+
+            $("#tbGadget").click(function () {
+                $("#ItemType").val(1);
+                $(".jewelry").hide();
+                $(".gadget").show();
+            });
+
+            var table = $('#SignatureCardsTable').DataTable({
+                responsive: true
+            });
+
+            $("#btnScModalSelect").click(function () {
+                var selected = table.rows('.selected').data();
+                if (selected.length === 1) {
+                    var selectedText =
+                        "PT:" + selected[0][1] + " " +
+                            "SC Date:" + selected[0][2] + " " +
+                            "Client Name:" + selected[0][3];
+
+                    $("#btnSelectSc").text(selectedText);
+
+                    $('#myModal').modal('hide');
+
+                    @*var id = selected[0][0];
+
+                    var url = '@Url.Action("Create", "AppraiserSlip", new { id = "__id__" })';
+                    window.location.href = url.replace('__id__', id);*@
+
+                    return;
+                }
+
+                alert('please select one(1) record');
+            });
+
+            $('#SignatureCardsTable tbody').on('click', 'tr', function () {
+                $(this).toggleClass('selected');
+            });
+
+        });
+    </script>
+}

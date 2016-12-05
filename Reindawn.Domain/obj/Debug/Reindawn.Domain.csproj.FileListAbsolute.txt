@@ -1,0 +1,14 @@
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\bin\Debug\Reindawn.Domain.dll.config
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\bin\Debug\Reindawn.Domain.dll
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\bin\Debug\Reindawn.Domain.pdb
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\bin\Debug\EntityFramework.dll
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\bin\Debug\EntityFramework.xml
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\obj\Debug\Reindawn.Domain.dll
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\obj\Debug\Reindawn.Domain.pdb
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\obj\Debug\Reindawn.Domain.csprojResolveAssemblyReference.cache
