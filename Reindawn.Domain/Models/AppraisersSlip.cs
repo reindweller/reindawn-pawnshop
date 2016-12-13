@@ -14,20 +14,9 @@ namespace Reindawn.Domain.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
-        public Guid SignatureCardId { get; set; }
-        public virtual SignatureCard SignatureCard { get; set; }
         public DateTime Date { get; set; }
-        public ItemTypeEnum ItemType { get; set; }
         public decimal Amount { get; set; }
-        public decimal? Weight { get; set; }
-        public decimal? Quantity { get; set; }
-        public JewelryTypeEnum? JewelryType { get; set; }
-        public decimal? Carat { get; set; }
-        public string Remarks { get; set; }
-        public string Brand { get; set; }
-        public string Model { get; set; }
         public string Inclusions { get; set; }
-        public string SerialNo { get; set; }
 
     }
 }

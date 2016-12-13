@@ -14,6 +14,9 @@ namespace Reindawn.Domain.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
+        public Guid PawnId { get; set; }
+        [ForeignKey("PawnId")]
+        public virtual Pawn Pawn { get; set; }
         public string PawnticketNo { get; set; }
         public DateTime Date { get; set; }
         public NamePrefixEnum Prefix { get; set; }

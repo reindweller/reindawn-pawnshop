@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Reindawn-Web.config Connection String" description="Reindawn Connection String used in web.config by the application to access the database." defaultValue="Data Source=mssql3.gear.host;Initial Catalog=reindawnpawnshop;User ID=reindawnpawnshop;Password=Te4A7~HQ7Ya~" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Arvin\\Projects\\GIT\\reindawn-pawnshop-master\\Reindawn\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Reindawn']/@connectionString" />
+  </parameter>
+</parameters>

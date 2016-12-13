@@ -15,15 +15,17 @@ namespace Reindawn.Domain.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
 
-
-        public ItemTypeEnum ItemType { get; set; }
-
+        public Guid PawnId { get; set; }
+        [ForeignKey("PawnId")]
+        public virtual Pawn Pawn { get; set; }
+        //public ItemTypeEnum ItemType { get; set; }
+        public string PawnTicketNo { get; set; }
         public DateTime DateLoanGranted { get; set; }
         public DateTime MaturityDate { get; set; }
         public DateTime ExpirationDate { get; set; }
         public DateTime AuctionSale { get; set; }
-        public Guid AppraisersSlipId { get; set; }
-        public virtual AppraisersSlip AppraisersSlip { get; set; }
+        //public Guid AppraisersSlipId { get; set; }
+        //public virtual AppraisersSlip AppraisersSlip { get; set; }
 
         //public decimal Principal { get; set; }
         public decimal Interest { get; set; }

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="ReindawnPawnshop" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Arvin\\Projects\\GIT\\reindawn-pawnshop-master\\Reindawn\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Arvin\\Projects\\GIT\\reindawn-pawnshop-master\\Reindawn\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="ReservationSystemConnectionString-Web.config Connection String" description="ReservationSystemConnectionString Connection String used in web.config by the application to access the database." value="Data Source=mssql3.gear.host;Initial Catalog=reindawnpawnshop;User ID=reindawnpawnshop;Password=Te4A7~HQ7Ya~" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Arvin\\Projects\\GIT\\reindawn-pawnshop-master\\Reindawn\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ReservationSystemConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="Reindawn-Web.config Connection String" description="Reindawn Connection String used in web.config by the application to access the database." value="Reindawn_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Arvin\\Projects\\GIT\\reindawn-pawnshop-master\\Reindawn\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Reindawn']/@connectionString" />
+  </parameter>
+</parameters>

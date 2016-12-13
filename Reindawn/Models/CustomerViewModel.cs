@@ -12,7 +12,7 @@ namespace Reindawn.Models
     {
         public Guid Id { get; set; }
         [Display(Name = "Prefix")]
-        public NamePrefixEnum Prefix { get; set; }
+        public NamePrefixEnum NamePrefix { get; set; }
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
         [Display(Name = "Middle Name")]

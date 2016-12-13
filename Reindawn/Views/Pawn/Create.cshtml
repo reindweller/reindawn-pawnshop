@@ -1,0 +1,238 @@
+﻿@model Reindawn.Models.PawnViewModel
+@{
+    ViewBag.Title = "Item";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Create Pawn</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Create New Pawn
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <p id="scDisplay">
+                                        Pawn Ticket No: @{ Html.DisplayFor(o => o.SignatureCard.PawnTicketNo);} <br/> 
+                                        Date: @{ Html.DisplayFor(o => o.SignatureCard.Date);} <br />
+                                        Name: @{ Html.DisplayFor(o => o.SignatureCard.NamePrefix);} @{ Html.DisplayFor(o => o.SignatureCard.FirstName);} @{ Html.DisplayFor(o => o.SignatureCard.MiddleName);} @{ Html.DisplayFor(o => o.SignatureCard.LastName);} <br/>
+                                        Address: @{ Html.DisplayFor(o => o.SignatureCard.Address);} <br />
+                                        Email: @{ Html.DisplayFor(o => o.SignatureCard.Email);} <br />
+                                        Mobile: @{ Html.DisplayFor(o => o.SignatureCard.Mobile);} <br />
+                                        Phone: @{ Html.DisplayFor(o => o.SignatureCard.Phone);} <br />
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!-- Button trigger modal -->
+                                    <button id="btnSelectSc" type="button" class="btn btn-primary" data-toggle="modal" data-target="#signatureCardModal">
+                                        (1) Signature Card
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <p id="asDisplay">
+                                        Amount: @{ Html.DisplayFor(o => o.AppraisersSlip.Amount);}<br /> 
+                                        Weight: @{ Html.DisplayFor(o => o.AppraisersSlip.Weight);}<br /> 
+                                        Quantity: @{ Html.DisplayFor(o => o.AppraisersSlip.Quantity);}<br /> 
+                                        JewelryType: @{ Html.DisplayFor(o => o.AppraisersSlip.JewelryType);}<br /> 
+                                        Carat: @{ Html.DisplayFor(o => o.AppraisersSlip.Carat);}<br /> 
+                                        Remarks: @{ Html.DisplayFor(o => o.AppraisersSlip.Remarks);}<br /> 
+                                        Brand: @{ Html.DisplayFor(o => o.AppraisersSlip.Brand);}<br /> 
+                                        Model: @{ Html.DisplayFor(o => o.AppraisersSlip.Model);}<br /> 
+                                        Inclusions: @{ Html.DisplayFor(o => o.AppraisersSlip.Inclusions);}<br /> 
+                                        SerialNo: @{ Html.DisplayFor(o => o.AppraisersSlip.SerialNo);}<br />
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!-- Button trigger modal -->
+                                    <button id="btnSelectAs" type="button" class="btn btn-primary" data-toggle="modal" data-target="#appraiserSlipModal">
+                                        (2) Appraiser Slip
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <p id="ptDisplay">
+                                        DateLoanGranted: @{ Html.DisplayFor(o => o.PawnTicket.DateLoanGranted);}<br /> 
+                                        ExpirationDate: @{ Html.DisplayFor(o => o.PawnTicket.ExpirationDate);}<br /> 
+                                        MaturityDate: @{ Html.DisplayFor(o => o.PawnTicket.MaturityDate);}<br /> 
+                                        AuctionSale: @{ Html.DisplayFor(o => o.PawnTicket.AuctionSale);}<br /> 
+                                        Amount: @{ Html.DisplayFor(o => o.PawnTicket.Amount);}<br /> 
+                                        Interest: @{ Html.DisplayFor(o => o.PawnTicket.Interest);}<br /> 
+                                        Description: @{ Html.DisplayFor(o => o.PawnTicket.Description);}<br />
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!-- Button trigger modal -->
+                                    <button id="btnSelectPt" type="button" class="btn btn-primary" data-toggle="modal" data-target="#pawnTicketModal">
+                                        (3) Pawn Ticket
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="signatureCardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Signature Card</h4>
+                </div>
+                <div class="modal-body">
+                    @Html.Partial("~/Views/SignatureCard/_SignatureCard.cshtml", Model.SignatureCard)
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button id="btnScModalOk" type="button" class="btn btn-primary">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="appraiserSlipModal" tabindex="-1" role="dialog" aria-labelledby="asLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="asLabel">Appraiser Slip</h4>
+                </div>
+                <div class="modal-body">
+                    @Html.Partial("~/Views/AppraiserSlip/_AppraiserSlip.cshtml", Model.AppraisersSlip)
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button id="btnAsModalOk" type="button" class="btn btn-primary">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="pawnTicketModal" tabindex="-1" role="dialog" aria-labelledby="ptLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="ptLabel">Pawn Ticket</h4>
+                </div>
+                <div class="modal-body">
+                    @Html.Partial("~/Views/PawnTicket/_PawnTicket.cshtml", Model.PawnTicket)
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button id="btnPtModalOk" type="button" class="btn btn-primary">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#btnScModalOk").click(function () {
+
+                $("#scDisplay").html(
+                    "Pawn Ticket No: " + $("#PawnTicketNo").val() + "<br/>" +
+                    "Date: " + $("#Date").val() + "<br/>" +
+                    "Name: " + $("#NamePrefix").text() + " " +
+                    $("#FirstName").val() + " " +
+                    $("#MiddleName").val() + " " +
+                    $("#LastName").val() + "<br/>" +
+                    "Address: " + $("#Address").val() + "<br/>" +
+                    "Email: " + $("#Email").val() + "<br/>" +
+                    "Mobile: " + $("#Mobile").val() + "<br/>" +
+                    "Phone: " + $("#Phone").val() + "<br/>"
+                );
+
+
+                $('#signatureCardModal').modal('hide');
+            });
+
+            $("#btnAsModalOk").click(function () {
+
+                $("#asDisplay").html(
+                    "Amount: " + $("#Amount").val() + "<br/>" +
+                    "Weight: " + $("#Weight").val() + "<br/>" +
+                    "Quantity: " + $("#Quantity").val() + "<br/>" +
+                    "JewelryType: " + $("#JewelryType").val() + "<br/>" +
+                    "Carat: " + $("#Carat").val() + "<br/>" +
+                    "Remarks: " + $("#Remarks").val() + "<br/>" +
+                    "Brand: " + $("#Brand").val() + "<br/>" +
+                    "Model: " + $("#Model").val() + "<br/>" +
+                    "Inclusions: " + $("#Inclusions").val() + "<br/>" +
+                    "SerialNo: " + $("#SerialNo").val() + "<br/>"
+                );
+
+
+                $('#appraiserSlipModal').modal('hide');
+            });
+
+
+            $("#btnPtModalOk").click(function () {
+
+                $("#ptDisplay").html(
+                    "DateLoanGranted: " + $("#DateLoanGranted").val() + "<br/>" +
+                    "ExpirationDate: " + $("#ExpirationDate").val() + "<br/>" +
+                    "MaturityDate: " + $("#MaturityDate").val() + "<br/>" +
+                    "AuctionSale: " + $("#AuctionSale").val() + "<br/>" +
+                    "Amount: " + $("#Amount").val() + "<br/>" +
+                    "Interest: " + $("#Interest").val() + "<br/>" +
+                    "Description: " + $("#Description").val() + "<br/>"
+                );
+
+
+                $('#pawnTicketModal').modal('hide');
+            });
+        });
+    </script>
+}

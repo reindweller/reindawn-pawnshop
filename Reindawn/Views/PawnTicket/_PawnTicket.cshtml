@@ -1,0 +1,118 @@
+﻿@model Reindawn.Models.PawnTicketViewModel
+<div class="row">
+    <div class="col-lg-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.PawnTicketNo)
+            @Html.EditorFor(model => model.PawnTicketNo, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.PawnTicketNo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.DateLoanGranted)
+            @Html.EditorFor(model => model.DateLoanGranted, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.DateLoanGranted, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <!-- /.col-lg-6 (nested) -->
+    <div class="col-lg-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.ExpirationDate)
+            @Html.EditorFor(model => model.ExpirationDate, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.ExpirationDate, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <!-- /.col-lg-6 (nested) -->
+</div>
+<!-- /.row (nested) -->
+<div class="row">
+    <div class="col-lg-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaturityDate)
+            @Html.EditorFor(model => model.MaturityDate, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.MaturityDate, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <!-- /.col-lg-6 (nested) -->
+    <div class="col-lg-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.AuctionSale)
+            @Html.EditorFor(model => model.AuctionSale, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.AuctionSale, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <!-- /.col-lg-6 (nested) -->
+</div>
+<!-- /.row (nested) -->
+<fieldset disabled>
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="form-group">
+                @Html.LabelFor(model => model.NamePrefix)
+                @Html.EditorFor(model => model.NamePrefix, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                @Html.ValidationMessageFor(model => model.NamePrefix, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <!-- /.col-lg-3 (nested) -->
+        <div class="col-lg-3">
+            <div class="form-group">
+                @Html.LabelFor(model => model.FirstName)
+                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <!-- /.col-lg-3 (nested) -->
+        <div class="col-lg-3">
+            <div class="form-group">
+                @Html.LabelFor(model => model.MiddleName)
+                @Html.EditorFor(model => model.MiddleName, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                @Html.ValidationMessageFor(model => model.MiddleName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <!-- /.col-lg-3 (nested) -->
+        <div class="col-lg-3">
+            <div class="form-group">
+                @Html.LabelFor(model => model.LastName)
+                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <!-- /.col-lg-3 (nested) -->
+    </div>
+    <!-- /.row (nested) -->
+</fieldset>
+<!-- /.fieldset (disabled) -->
+<div class="row">
+    <div class="col-lg-6">
+        <fieldset disabled>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Amount)
+                @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+            </div>
+        </fieldset>
+    </div>
+    <!-- /.col-lg-6 (nested) -->
+    <div class="col-lg-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Interest)
+            @Html.EditorFor(model => model.Interest, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.Interest, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <!-- /.col-lg-6 (nested) -->
+</div>
+<!-- /.row (nested) -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description)
+            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <!-- /.col-lg-12 (nested) -->
+</div>
+<!-- /.row (nested) -->

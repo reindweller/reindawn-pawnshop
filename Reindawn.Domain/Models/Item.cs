@@ -17,14 +17,16 @@ namespace Reindawn.Domain.Models
         public string Code { get; set; }
         public string Description { get; set; }
 
-        public ItemTypeEnum ItemTypeEnum { get; set; }
+        public ItemTypeEnum ItemType { get; set; }
         //jewelry
         public decimal Weight { get; set; }
         public JewelryTypeEnum JewelryType { get; set; }
+        public double Carat { get; set; }
 
         //gadget
         public string Brand { get; set; }
         public string Model { get; set; }
+        public string Inclusions { get; set; }
         public string SerialNo { get; set; }
         public string Name { get; set; }
 

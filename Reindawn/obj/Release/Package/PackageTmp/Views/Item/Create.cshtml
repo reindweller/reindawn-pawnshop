@@ -1,0 +1,151 @@
+﻿@model Reindawn.Models.ItemViewModel
+@{
+    ViewBag.Title = "Item";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Create Item</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Create New Item
+                </div>
+                <div class="panel-body">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#home" data-toggle="tab" id="tbJewelry">Jewelry</a>
+                        </li>
+                        <li>
+                            <a href="#home" data-toggle="tab" id="tbGadget">Gadget</a>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    @Html.HiddenFor(model => model.ItemType)
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="home">
+                            &nbsp;
+                            <div class="row jewelry">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Weight)
+                                        @Html.EditorFor(model => model.Weight, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Weight, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                @*<div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Quantity)
+                                        @Html.EditorFor(model => model.Quantity, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>*@
+                            </div>
+                            <div class="row jewelry">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.JewelryType)
+                                        @Html.EnumDropDownListFor(model => model.JewelryType, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.JewelryType, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Carat)
+                                        @Html.EditorFor(model => model.Carat, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Carat, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gadget">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Brand)
+                                        @Html.EditorFor(model => model.Brand, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Brand, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Model)
+                                        @Html.EditorFor(model => model.Model, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Model, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gadget">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.SerialNo)
+                                        @Html.EditorFor(model => model.SerialNo, new {htmlAttributes = new {@class = "form-control"}})
+                                        @Html.ValidationMessageFor(model => model.SerialNo, "", new {@class = "text-danger"})
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Inclusions)
+                                        @Html.EditorFor(model => model.Inclusions, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Inclusions, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.BranchId)
+                                        @Html.DropDownListFor(model => model.BranchId,
+                                            Model.BranchSelectListItems,
+                                            "-- Select Account --",
+                                            new { @class = "form-control" })
+
+                                        @Html.ValidationMessageFor(model => model.BranchId, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+}
+
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $(".gadget").hide();
+
+            $("#tbJewelry").click(function () {
+                $("#ItemType").val(0);
+                $(".jewelry").show();
+                $(".gadget").hide();
+            });
+
+            $("#tbGadget").click(function () {
+                $("#ItemType").val(1);
+                $(".jewelry").hide();
+                $(".gadget").show();
+            });
+        });
+    </script>
+}

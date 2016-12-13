@@ -13,12 +13,12 @@ namespace Reindawn.Models
         public Guid Id { get; set; }
 
         [Display(Name = "Pawn Ticket Number")]
-        public string PawnticketNo { get; set; }
+        public string PawnTicketNo { get; set; }
         [Required]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime Date { get; set; }
-        public NamePrefixEnum Prefix { get; set; }
+        public NamePrefixEnum NamePrefix { get; set; }
         [Required]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }

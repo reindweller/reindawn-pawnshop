@@ -6,3 +6,7 @@
 .cursor-hand {
     cursor: pointer;
 }
+
+.underline-bot {
+    border-bottom: 1px solid #333;
+}

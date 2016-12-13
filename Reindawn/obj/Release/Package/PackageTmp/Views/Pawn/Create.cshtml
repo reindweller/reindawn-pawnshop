@@ -1,0 +1,352 @@
+﻿@model Reindawn.Models.PawnViewModel
+@{
+    ViewBag.Title = "Item";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Create Pawn</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Create New Pawn
+                </div>
+                <div class="panel-body">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#appraiserslip" data-toggle="tab" id="tbAppraiserSlip">Appraiser Slip</a>
+                        </li>
+                        <li>
+                            <a href="#signaturecard" data-toggle="tab" id="tbSignatureCare">Signature Card</a>
+                        </li>
+                        <li>
+                            <a href="#pawnticket" data-toggle="tab" id="tbPawnTicket">Pawn Ticket</a>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="appraiserslip">
+                            &nbsp;
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.AppraisersSlip.Amount)
+                                        @Html.EditorFor(model => model.AppraisersSlip.Amount, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.AppraisersSlip.Amount, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Item.Weight)
+                                        @Html.EditorFor(model => model.Item.Weight, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Item.Weight, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.AppraisersSlip.Quantity)
+                                        @Html.EditorFor(model => model.AppraisersSlip.Quantity, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.AppraisersSlip.Quantity, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Item.JewelryType)
+                                        @Html.EditorFor(model => model.Item.JewelryType, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Item.JewelryType, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Item.Carat)
+                                        @Html.EditorFor(model => model.Item.Carat, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Item.Carat, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.AppraisersSlip.Remarks)
+                                        @Html.EditorFor(model => model.AppraisersSlip.Remarks, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.AppraisersSlip.Remarks, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Item.Brand)
+                                        @Html.EditorFor(model => model.Item.Brand, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Item.Brand, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Item.Model)
+                                        @Html.EditorFor(model => model.Item.Model, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Item.Model, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Item.Inclusions)
+                                        @Html.EditorFor(model => model.Item.Inclusions, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Item.Inclusions, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Item.SerialNo)
+                                        @Html.EditorFor(model => model.Item.SerialNo, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Item.SerialNo, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="signaturecard">
+                            &nbsp;
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.PawnTicket.PawnTicketNo)
+                                        @Html.EditorFor(model => model.PawnTicket.PawnTicketNo, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.PawnTicket.PawnTicketNo, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.SignatureCard.Date)
+                                        @Html.EditorFor(model => model.SignatureCard.Date, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.SignatureCard.Date, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Customer.Prefix)
+                                        @Html.EditorFor(model => model.Customer.Prefix, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Customer.Prefix, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-3 (nested) -->
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Customer.FirstName)
+                                        @Html.EditorFor(model => model.Customer.FirstName, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Customer.FirstName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-3 (nested) -->
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Customer.MiddleName)
+                                        @Html.EditorFor(model => model.Customer.MiddleName, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Customer.MiddleName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-3 (nested) -->
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Customer.LastName)
+                                        @Html.EditorFor(model => model.Customer.LastName, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Customer.LastName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-3 (nested) -->
+                            </div>
+                            <!-- /.row customer name -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Customer.Address)
+                                        @Html.EditorFor(model => model.Customer.Address, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Customer.Address, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Customer.Email)
+                                        @Html.EditorFor(model => model.Customer.Email, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Customer.Address, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Customer.Mobile)
+                                        @Html.EditorFor(model => model.Customer.Mobile, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Customer.Mobile, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Customer.Phone)
+                                        @Html.EditorFor(model => model.Customer.Phone, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Customer.Phone, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pawnticket">
+                            &nbsp;
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.PawnTicket.DateLoanGranted)
+                                        @Html.EditorFor(model => model.PawnTicket.DateLoanGranted, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.PawnTicket.DateLoanGranted, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.PawnTicket.ExpirationDate)
+                                        @Html.EditorFor(model => model.PawnTicket.ExpirationDate, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.PawnTicket.ExpirationDate, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.PawnTicket.MaturityDate)
+                                        @Html.EditorFor(model => model.PawnTicket.MaturityDate, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.PawnTicket.MaturityDate, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.PawnTicket.AuctionSale)
+                                        @Html.EditorFor(model => model.PawnTicket.AuctionSale, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.PawnTicket.AuctionSale, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                            <fieldset disabled>
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Customer.Prefix)
+                                            @Html.EditorFor(model => model.Customer.Prefix, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                            @Html.ValidationMessageFor(model => model.Customer.Prefix, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <!-- /.col-lg-3 (nested) -->
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Customer.FirstName)
+                                            @Html.EditorFor(model => model.Customer.FirstName, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                            @Html.ValidationMessageFor(model => model.Customer.FirstName, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <!-- /.col-lg-3 (nested) -->
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Customer.MiddleName)
+                                            @Html.EditorFor(model => model.Customer.MiddleName, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                            @Html.ValidationMessageFor(model => model.Customer.MiddleName, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <!-- /.col-lg-3 (nested) -->
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Customer.LastName)
+                                            @Html.EditorFor(model => model.Customer.LastName, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                            @Html.ValidationMessageFor(model => model.Customer.LastName, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <!-- /.col-lg-3 (nested) -->
+                                </div>
+                                <!-- /.row (nested) -->
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.SignatureCard.Address)
+                                            @Html.EditorFor(model => model.SignatureCard.Address, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                            @Html.ValidationMessageFor(model => model.SignatureCard.Address, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <!-- /.col-lg-12 (nested) -->
+                                </div>
+                                <!-- /.row (nested) -->
+                            </fieldset>
+                            <!-- /.fieldset (disabled) -->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <fieldset disabled>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.AppraisersSlip.Amount)
+                                            @Html.EditorFor(model => model.AppraisersSlip.Amount, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                            @Html.ValidationMessageFor(model => model.AppraisersSlip.Amount, "", new { @class = "text-danger" })
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.PawnTicket.Interest)
+                                        @Html.EditorFor(model => model.PawnTicket.Interest, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.PawnTicket.Interest, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.PawnTicket.Description)
+                                        @Html.EditorFor(model => model.PawnTicket.Description, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.PawnTicket.Description, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-12 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-left fa-fw"></i> Back</button>
+                    <button type="submit" class="btn  btn-default"><i class="fa fa-arrow-circle-right fa-fw"></i> Next</button>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+}
+
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+        });
+    </script>
+}

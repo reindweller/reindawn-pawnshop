@@ -14,26 +14,27 @@ namespace Reindawn.Models
         public Guid Id { get; set; }
         public string Code { get; set; }
         public string Description { get; set; }
-
         [Display(Name = "Item Type")]
-        public ItemTypeEnum ItemTypeEnum { get; set; }
+        public ItemTypeEnum ItemType { get; set; }
         //jewelry
         public decimal Weight { get; set; }
 
         [Display(Name = "JewelryType Type")]
         public JewelryTypeEnum JewelryType { get; set; }
+        public double Carat { get; set; }
 
         //gadget
         public string Brand { get; set; }
         public string Model { get; set; }
-
+        public string Inclusions { get; set; }
         [Display(Name = "Serial No.")]
         public string SerialNo { get; set; }
         public string Name { get; set; }
 
         public Guid BranchId { get; set; }
-        public virtual Branch Branch { get; set; }
+        public string Branch { get; set; }
+        public List<SelectListItem> BranchSelectListItems { get; set; }
 
-
+        public string Details { get; set; }
     }
 }

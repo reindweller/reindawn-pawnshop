@@ -11,4 +11,3 @@ C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\bin\Debug\Microso
 C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\obj\Debug\Reindawn.Domain.dll
 C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\obj\Debug\Reindawn.Domain.pdb
-C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Domain\obj\Debug\Reindawn.Domain.csprojResolveAssemblyReference.cache

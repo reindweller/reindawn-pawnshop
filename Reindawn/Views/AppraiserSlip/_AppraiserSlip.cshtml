@@ -1,0 +1,83 @@
+﻿@model Reindawn.Models.AppraisersSlipViewModel
+<div class="row">
+    <div class="col-lg-12">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Amount)
+            @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Weight)
+            @Html.EditorFor(model => model.Weight, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.Weight, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Quantity)
+            @Html.EditorFor(model => model.Quantity, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.JewelryType)
+            @Html.EnumDropDownListFor(model => model.JewelryType, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.JewelryType, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Carat)
+            @Html.EditorFor(model => model.Carat, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.Carat, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Remarks)
+            @Html.EditorFor(model => model.Remarks, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.Remarks, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Brand)
+            @Html.EditorFor(model => model.Brand, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.Brand, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Model)
+            @Html.EditorFor(model => model.Model, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.Model, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Inclusions)
+            @Html.EditorFor(model => model.Inclusions, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.Inclusions, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.SerialNo)
+            @Html.EditorFor(model => model.SerialNo, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.SerialNo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>

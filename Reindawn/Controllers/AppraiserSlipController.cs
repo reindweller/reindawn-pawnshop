@@ -26,18 +26,18 @@ namespace Reindawn.Controllers
         protected override AppraisersSlipViewModel AssignEntityToViewModel(AppraisersSlip entity)
         {
             var viewModel = entity.Convert<AppraisersSlip, AppraisersSlipViewModel>();
-            if (viewModel.ItemType == ItemTypeEnum.Jewellery)
-            {
-                viewModel.Details = string.Format("Wgt:{0} Qty:{1} Type:{2} Carat:{3}",
-                    viewModel.Weight, viewModel.Quantity, viewModel.JewelryType, viewModel.Carat
-                    );
-            }
-            else if (viewModel.ItemType == ItemTypeEnum.Gadget)
-            {
-                viewModel.Details = string.Format("Brand:{0} Model:{1} Inc:{2} SN:{3}",
-                    viewModel.Brand, viewModel.Model, viewModel.Inclusions, viewModel.SerialNo
-                    );
-            }
+            //if (viewModel.ItemType == ItemTypeEnum.Jewellery)
+            //{
+            //    viewModel.Details = string.Format("Wgt:{0} Qty:{1} Type:{2} Carat:{3}",
+            //        viewModel.Weight, viewModel.Quantity, viewModel.JewelryType, viewModel.Carat
+            //        );
+            //}
+            //else if (viewModel.ItemType == ItemTypeEnum.Gadget)
+            //{
+            //    viewModel.Details = string.Format("Brand:{0} Model:{1} Inc:{2} SN:{3}",
+            //        viewModel.Brand, viewModel.Model, viewModel.Inclusions, viewModel.SerialNo
+            //        );
+            //}
             return viewModel;
         }
 
@@ -50,9 +50,9 @@ namespace Reindawn.Controllers
         {
             viewModel.Date = DateTime.Now;
             SignatureCardService signatureCardService = new SignatureCardService(UnitOfWork);
-            viewModel.SignatureCardsSelect = new List<SignatureCardViewModel>();
-            viewModel.SignatureCardsSelect =
-                signatureCardService.GetAll().Select(AssignScToScViewModel).ToList();
+            //viewModel.SignatureCardsSelect = new List<SignatureCardViewModel>();
+            //viewModel.SignatureCardsSelect =
+            //    signatureCardService.GetAll().Select(AssignScToScViewModel).ToList();
             return viewModel;
         }
 

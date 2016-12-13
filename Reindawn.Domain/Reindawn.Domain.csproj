@@ -74,8 +74,10 @@
     <Compile Include="Models\Business.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\InterestPay.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\News.cs" />
+    <Compile Include="Models\Pawn.cs" />
     <Compile Include="Models\PawnTicket.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\SignatureCard.cs" />

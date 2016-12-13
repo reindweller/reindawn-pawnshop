@@ -81,13 +81,14 @@ namespace Reindawn.Repository.Context
         }
 
         
-        public DbSet<SignatureCard> SignatureCards { get; set; }
+        //public DbSet<SignatureCard> SignatureCards { get; set; }
         public DbSet<AppraisersSlip> AppraisersSlips { get; set; }
         public DbSet<PawnTicket> PawnTickets { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Item> Items { get; set; }
         public DbSet<Branch> Branches { get; set; }
-
+        public DbSet<Pawn> Pawns { get; set; }
+        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
 

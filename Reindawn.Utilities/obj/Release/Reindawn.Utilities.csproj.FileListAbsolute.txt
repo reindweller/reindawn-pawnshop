@@ -1,0 +1,7 @@
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Utilities\bin\Release\Reindawn.Utilities.dll
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Utilities\bin\Release\Reindawn.Utilities.pdb
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Utilities\bin\Release\AutoMapper.dll
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Utilities\bin\Release\AutoMapper.xml
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Utilities\obj\Release\Reindawn.Utilities.csprojResolveAssemblyReference.cache
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Utilities\obj\Release\Reindawn.Utilities.dll
+C:\Arvin\Projects\GIT\reindawn-pawnshop-master\Reindawn.Utilities\obj\Release\Reindawn.Utilities.pdb
